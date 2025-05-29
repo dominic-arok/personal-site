@@ -22,43 +22,45 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left group cursor-pointer"
       >
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+        <div className="flex flex-col sm:flex-row items-start mb-2">
           <div className="flex flex-wrap items-center gap-2">
             <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
-            <div className="flex items-center gap-2 text-xs sm:text-sm">
-              {liveLink && (
-                <a 
-                  href={liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-[#734f96] hover:underline inline-flex items-center gap-1"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Live Link
-                  <FiExternalLink size={14} className="inline-block" />
-                </a>
-              )}
-              {githubLink && (
-                <a 
-                  href={githubLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-[#734f96] hover:underline inline-flex items-center gap-1"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaGithub size={16} className="inline-block" />
-                  Source
-                  <FiExternalLink size={14} className="inline-block" />
-                </a>
-              )}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-xs sm:text-sm">
+                {liveLink && (
+                  <a 
+                    href={liveLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#734f96] hover:underline inline-flex items-center gap-1"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Live Link
+                    <FiExternalLink size={14} className="inline-block" />
+                  </a>
+                )}
+                {githubLink && (
+                  <a 
+                    href={githubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[#734f96] hover:underline inline-flex items-center gap-1"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaGithub size={16} className="inline-block" />
+                    Source
+                    <FiExternalLink size={14} className="inline-block" />
+                  </a>
+                )}
+              </div>
+              <MdKeyboardArrowDown 
+                className={`transition-transform duration-200 text-gray-400 group-hover:text-white ${
+                  isExpanded ? 'rotate-180' : ''
+                }`}
+                size={20}
+              />
             </div>
           </div>
-          <MdKeyboardArrowDown 
-            className={`transition-transform duration-200 text-gray-400 group-hover:text-white ${
-              isExpanded ? 'rotate-180' : ''
-            }`}
-            size={20}
-          />
         </div>
         <div className="flex flex-wrap gap-2 mt-2">
           {technologies.map((tech, index) => (

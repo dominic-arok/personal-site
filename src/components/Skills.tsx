@@ -5,7 +5,7 @@ export default function Skills() {
     "Node.js",
     "React",
     "TypeScript",
-    "TailwindCSS",
+    "Tailwind",
     "PostgreSQL",
     "MongoDB",
     "Docker",
