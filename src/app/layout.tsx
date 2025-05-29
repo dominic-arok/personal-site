@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dominic Arokiaraj - Software Engineer",
+  title: "Dominic Arokiaraj",
   description: "3rd Year Computer Science Student at UC Santa Cruz with experience in full-stack software engineering.",
 };
 
