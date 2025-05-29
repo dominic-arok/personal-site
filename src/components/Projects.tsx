@@ -92,7 +92,7 @@ export default function Projects() {
     {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
-      description: "Developed CLI tool with Go that stores/runs API requests, enabling 2x faster API testing than traditional GUI tools. Implemented support for 7 essential Postman features, including request headers, JSON bodies, and named collections. Published tool to Homebrew package manager and received 50+ downloads.",
+      description: "Developed CLI tool with Go that stores/runs API requests, enabling 2x faster API testing than traditional GUI tools. Implemented support for 7 essential Postman features, including request headers, JSON bodies, and named collections. Published tool to Homebrew package manager and received 30+ downloads.",
     },
     {
       title: "Safe Deposit",
