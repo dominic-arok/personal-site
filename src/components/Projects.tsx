@@ -116,7 +116,7 @@ export default function Projects() {
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing"
+      description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing."
     }
   ];
 
