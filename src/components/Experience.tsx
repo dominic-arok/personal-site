@@ -23,9 +23,9 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left group cursor-pointer"
       >
-        <div className="flex justify-between items-start mb-2">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
           <div className="flex items-start gap-4">
-            <div className="relative w-12 h-12 flex-shrink-0">
+            <div className="relative w-10 sm:w-12 h-10 sm:h-12 flex-shrink-0">
               <Image
                 src={logo}
                 alt={`${company} logo`}
@@ -34,7 +34,7 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
               />
             </div>
             <div>
-              <h3 className="text-xl font-semibold flex items-center gap-2">
+              <h3 className="text-lg sm:text-xl font-semibold flex flex-wrap items-center gap-2">
                 {company}
                 {liveLink && (
                   <a 
@@ -55,20 +55,20 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
                   size={20}
                 />
               </h3>
-              <p className="text-gray-400">{role}</p>
+              <p className="text-sm sm:text-base text-gray-400">{role}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-500">{period}</span>
+            <span className="text-xs sm:text-sm text-gray-500">{period}</span>
           </div>
         </div>
       </button>
       <div 
-        className={`overflow-hidden transition-all duration-200 ease-in-out pl-16 ${
+        className={`overflow-hidden transition-all duration-200 ease-in-out pl-14 sm:pl-16 ${
           isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-gray-400 leading-relaxed">
+        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
           {description}
         </p>
       </div>
@@ -96,7 +96,7 @@ export default function Experience() {
 
   return (
     <section className="max-w-4xl mx-auto pb-4 pt-8">
-      <h2 className="text-2xl font-bold mb-8">Experience</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-8">Experience</h2>
       {experiences.map((exp, index) => (
         <ExperienceItem key={index} {...exp} />
       ))}

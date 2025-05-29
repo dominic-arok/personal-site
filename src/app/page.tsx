@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white relative">
       <Nav />
-      <div className="ml-64 relative z-10">
-        <div className="container mx-auto px-8 py-8">
+      <div className="lg:ml-64 relative z-10">
+        <div className="container mx-auto px-4 lg:px-8 py-8">
           <div id="about">
             <Header />
           </div>

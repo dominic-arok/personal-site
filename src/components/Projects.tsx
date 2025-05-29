@@ -22,10 +22,10 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left group cursor-pointer"
       >
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <h3 className="text-xl font-semibold">{title}</h3>
-            <div className="flex items-center gap-2 text-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
+            <div className="flex items-center gap-2 text-xs sm:text-sm">
               {liveLink && (
                 <a 
                   href={liveLink} 
@@ -64,7 +64,7 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
           {technologies.map((tech, index) => (
             <span
               key={index}
-              className="px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-sm transition-all duration-200 hover:scale-105 cursor-default"
+              className="px-2 sm:px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs sm:text-sm transition-all duration-200 hover:scale-105 cursor-default"
               onClick={(e) => e.stopPropagation()}
             >
               {tech}
@@ -77,7 +77,7 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
           isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-gray-400 leading-relaxed">
+        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
           {description}
         </p>
       </div>
@@ -120,7 +120,7 @@ export default function Projects() {
 
   return (
     <section className="relative max-w-4xl mx-auto py-8">
-      <h2 className="text-2xl font-bold mb-8">Projects</h2>
+      <h2 className="text-xl sm:text-2xl font-bold mb-8">Projects</h2>
       {projects.map((project, index) => (
         <ProjectItem key={index} {...project} />
       ))}

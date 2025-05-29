@@ -14,18 +14,18 @@ export default function Header() {
 
       {/* Content */}
       <div className="relative">
-        <div className="flex items-center gap-4 mb-8">
-          <h1 className="text-4xl font-bold text-white">Dominic Arokiaraj</h1>
-          <div className="flex items-center text-gray-400 text-base">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white">Dominic Arokiaraj</h1>
+          <div className="flex items-center text-gray-400 text-sm sm:text-base">
             <MdLocationOn size={16} className="mr-1" />
             Mountain House, CA
           </div>
         </div>
-        <p className="text-lg mb-12 text-gray-300">
+        <p className="text-base sm:text-lg mb-8 sm:mb-12 text-gray-300">
           3rd Year Computer Science Student at UC Santa Cruz. Excited for opportunities to learn and contribute my skills to interesting software!
         </p>
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">About</h2>
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">About</h2>
           <p className="text-gray-400">
             I have experience in full-stack software engineering across several types of applications. I have built web applications, desktop applications, microservices, CLI tools, and libraries.
           </p>
