@@ -11,9 +11,10 @@ interface ProjectProps {
   description: string;
   liveLink?: string;
   githubLink?: string;
+  year: string;
 }
 
-function ProjectItem({ title, technologies, description, liveLink, githubLink }: ProjectProps) {
+function ProjectItem({ title, technologies, description, liveLink, githubLink, year }: ProjectProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -22,7 +23,7 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
         onClick={() => setIsExpanded(!isExpanded)}
         className="w-full text-left group cursor-pointer"
       >
-        <div className="flex flex-col sm:flex-row items-start mb-2">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
           <div className="flex flex-wrap items-center gap-2">
             <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
             <div className="flex items-center gap-2">
@@ -61,6 +62,9 @@ function ProjectItem({ title, technologies, description, liveLink, githubLink }:
               />
             </div>
           </div>
+          <div className="flex items-center gap-2 mt-1 sm:mt-0">
+            <span className="text-xs sm:text-sm text-gray-500">{year}</span>
+          </div>
         </div>
         <div className="flex flex-wrap gap-2 mt-2">
           {technologies.map((tech, index) => (
@@ -93,30 +97,35 @@ export default function Projects() {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
       description: "Developed CLI tool with Go that stores/runs API requests, enabling 2x faster API testing than traditional GUI tools. Implemented support for 7 essential Postman features, including request headers, JSON bodies, and named collections. Published tool to Homebrew package manager and received 30+ downloads.",
+      year: "2025"
     },
     {
       title: "Safe Deposit",
       technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
       description: "Created web application in Node.js and Express.js that provides secure file distribution at scale. Constructed user-friendly frontend interface with EJS, reducing file upload process to < 5 seconds. Stored encrypted passwords in MongoDB Atlas, enabling protected downloads and improving security by 35%.",
       liveLink: "https://safedeposit.onrender.com",
-      githubLink: "https://github.com/dominic-arok/SafeDeposit"
+      githubLink: "https://github.com/dominic-arok/SafeDeposit",
+      year: "2025"
     },
     {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
       description: "Collaborated with Agile team of 5 to develop full-stack recipe platform featuring over 50000 recipes. Implemented and integrated React components with REST API endpoints, improving data retrieval by 25%. Configured DNS, OAuth, and environment keys via Clerk.js to deploy app, reducing downtime by 8 hours.",
       liveLink: "https://biteright.co",
-      githubLink: "https://github.com/BiteRight/frontend"
+      githubLink: "https://github.com/BiteRight/frontend",
+      year: "2024"
     },
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Developed REST API microservice to auto-fill and generate PDFs with user data, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients."
+      description: "Developed REST API microservice to auto-fill and generate PDFs with user data, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients.",
+      year: "2023"
     },
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing."
+      description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing.",
+      year: "2022"
     }
   ];
 
