@@ -82,14 +82,14 @@ export default function Experience() {
       company: "Universal Audio",
       role: "Software Developer (Sponsored Project)",
       period: "Jan 2025 - Jun 2025",
-      description: "Led team to develop USB audio interface with C++ firmware on the i.MX RT1170 microcontroller. Built desktop application in C++ and JUCE, providing real-time audio control through an intuitive UI. Developed channel mixing and audio effects features, enabling users to apply effects with < 1 ms of latency.",
+      description: "Led team to develop USB audio interface with C++ microcontroller firmware, enabling 4 channel audio streaming. Built accompanying desktop application in C++ and JUCE, providing real-time audio control through intuitive UI.Created mixing and audio effects features using DSP algorithms, enabling users to apply effects with < 1 ms of latency",
       logo: "/ua.jpeg"
     },
     {
       company: "Ushur Inc.",
       role: "Software Engineer Intern",
       period: "Jun 2024 - Nov 2024",
-      description: "Developed React component library with 50+ customizable variations, cutting UI development time by 30%. Built and documented components with TypeScript, Tailwind, and Storybook.js, boosting maintainability by 20%. Collaborated with cross-functional team of designers and engineers, achieving 98% accuracy to UI/UX designs.",
+      description: "Developed component library of 50+ customizable variations with React, cutting UI development time by 30%. Built and documented components with TypeScript, Tailwind, and Storybook.js, boosting maintainability by 20%. Delivered UI features from Figma by collaborating with design team, achieving 98% accuracy to UI/UX designs",
       logo: "/ushur.jpeg"
     }
   ];

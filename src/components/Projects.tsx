@@ -96,13 +96,13 @@ export default function Projects() {
     {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
-      description: "Developed CLI tool with Go that stores/runs API requests, enabling 2x faster API testing than traditional GUI tools. Implemented support for 7 essential Postman features, including request headers, JSON bodies, and named collections. Published tool to Homebrew package manager and received 30+ downloads.",
+      description: "Developed CLI tool with Go and Cobra that implements 7 essential Postman features directly in the terminal. Built request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUI tools. Published tool with Homebrew package manager and received 30+ downloads",
       year: "2025"
     },
     {
       title: "Safe Deposit",
       technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
-      description: "Created web application in Node.js and Express.js that provides secure file distribution at scale. Constructed user-friendly frontend interface with EJS, reducing file upload process to < 5 seconds. Stored encrypted passwords in MongoDB Atlas, enabling protected downloads and improving security by 35%.",
+      description: "Created web app with Node.js / Express.js, providing secure file distribution and up to 1000 concurrent downloads.Constructed user-friendly frontend interface with EJS, reducing file upload process to < 5 seconds. Stored encrypted passwords with MongoDB Atlas, enabling protected downloads and improving security by 35%",
       liveLink: "https://safedeposit.onrender.com",
       githubLink: "https://github.com/dominic-arok/SafeDeposit",
       year: "2025"
