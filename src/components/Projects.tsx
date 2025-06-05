@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { FiExternalLink } from "react-icons/fi";
-import { FaGithub } from "react-icons/fa";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import Image from 'next/image';
 
 interface ProjectProps {
   title: string;
@@ -12,92 +11,144 @@ interface ProjectProps {
   liveLink?: string;
   githubLink?: string;
   year: string;
+  image?: string;
+  category?: string;
 }
 
-function ProjectItem({ title, technologies, description, liveLink, githubLink, year }: ProjectProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+function ProjectCard({ project, onClick }: { project: ProjectProps; onClick: () => void }) {
   return (
-    <div className="mb-8">
-      <button 
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full text-left group cursor-pointer"
-      >
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
-          <div className="flex flex-wrap items-center gap-2">
-            <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-2 text-xs sm:text-sm">
-                {liveLink && (
-                  <a 
-                    href={liveLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-[#734f96] hover:underline inline-flex items-center gap-1"
-                    onClick={(e) => e.stopPropagation()}
+    <button 
+      onClick={onClick}
+      className="group bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all duration-200 cursor-pointer w-full flex flex-col"
+    >
+      {project.image && (
+        <div className="relative w-full aspect-video">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:opacity-80 transition-opacity duration-200"
+          />
+        </div>
+      )}
+      <div className="p-6">
+        <h3 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-2">
+          {project.title}
+        </h3>
+        {project.category && (
+          <span className="text-[13px] leading-[20px] font-[500] text-[rgb(133,133,133)] block mb-3">
+            {project.category}
+          </span>
+        )}
+        <div className="flex flex-wrap gap-2 justify-center">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)]"
+            >
+              {tech}{index < project.technologies.length - 1 ? " · " : ""}
+            </span>
+          ))}
+        </div>
+      </div>
+    </button>
+  );
+}
+
+function ProjectModal({ project, onClose }: { project: ProjectProps; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/80" onClick={onClose} />
+      <div className="relative bg-[#1c1c1c] rounded-lg w-full max-w-3xl">
+        <div className="sticky top-0 left-0 right-0 flex justify-end bg-[#1c1c1c] p-4 z-10">
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white bg-[#1c1c1c] rounded-full p-1"
+          >
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div className="px-6 pb-6">
+          <div className="space-y-4">
+            {project.image && (
+              <div className="relative w-full max-w-2xl mx-auto">
+                <div className="relative aspect-video rounded-lg overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            )}
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <h3 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)]">
+                  {project.title}
+                </h3>
+                <span className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+                  {project.year}
+                </span>
+              </div>
+              <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-2 sm:px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)] transition-all duration-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-4">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[16px] leading-[24px] font-[400] text-[#734f96] hover:underline inline-flex items-center gap-1"
                   >
                     Live Link
                     <FiExternalLink size={14} className="inline-block" />
                   </a>
                 )}
-                {githubLink && (
-                  <a 
-                    href={githubLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-[#734f96] hover:underline inline-flex items-center gap-1"
-                    onClick={(e) => e.stopPropagation()}
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[16px] leading-[24px] font-[400] text-[#734f96] hover:underline inline-flex items-center gap-1"
                   >
-                    <FaGithub size={16} className="inline-block" />
                     Source
                     <FiExternalLink size={14} className="inline-block" />
                   </a>
                 )}
               </div>
-              <MdKeyboardArrowDown 
-                className={`transition-transform duration-200 text-gray-400 group-hover:text-white ${
-                  isExpanded ? 'rotate-180' : ''
-                }`}
-                size={20}
-              />
             </div>
           </div>
-          <div className="flex items-center gap-2 mt-1 sm:mt-0">
-            <span className="text-xs sm:text-sm text-gray-500">{year}</span>
-          </div>
         </div>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {technologies.map((tech, index) => (
-            <span
-              key={index}
-              className="px-2 sm:px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-xs sm:text-sm transition-all duration-200 hover:scale-105 cursor-default"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </button>
-      <div 
-        className={`overflow-hidden transition-all duration-200 ease-in-out ${
-          isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
-          {description}
-        </p>
       </div>
     </div>
   );
 }
 
 export default function Projects() {
-  const projects = [
+  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null);
+
+  const projects: ProjectProps[] = [
     {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
       description: "Developed CLI tool with Go and Cobra that implements 7 essential Postman features directly in the terminal. Built request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUI tools. Published tool with Homebrew package manager and received 30+ downloads.",
-      year: "2025"
+      year: "2025",
+      category: "CLI Tool",
+      image: "/images/post-boy.png"
     },
     {
       title: "Safe Deposit",
@@ -105,7 +156,9 @@ export default function Projects() {
       description: "Created web app with Node.js / Express.js, providing secure file distribution and up to 1000 concurrent downloads. Constructed user-friendly frontend interface with EJS, reducing file upload process to < 5 seconds. Stored encrypted passwords with MongoDB Atlas, enabling protected downloads and improving security by 35%.",
       liveLink: "https://safedeposit.onrender.com",
       githubLink: "https://github.com/dominic-arok/SafeDeposit",
-      year: "2025"
+      year: "2025",
+      category: "Web Application",
+      image: "/images/safe-deposit.png"
     },
     {
       title: "Bite Right",
@@ -113,33 +166,46 @@ export default function Projects() {
       description: "Collaborated with Agile team of 5 to develop full-stack recipe platform featuring over 50000 recipes. Implemented and integrated React components with REST API endpoints, improving data retrieval by 25%. Configured DNS, OAuth, and environment keys via Clerk.js to deploy app, reducing downtime by 8 hours.",
       liveLink: "https://biteright.co",
       githubLink: "https://github.com/BiteRight/frontend",
-      year: "2024"
+      year: "2024",
+      category: "Web Application",
+      image: "/images/bite-right.png"
     },
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
       description: "Developed REST API microservice to auto-fill and generate PDFs with user data, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients.",
-      year: "2023"
+      year: "2023",
+      category: "Microservice",
+      image: "/images/doc-service.png"
     },
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
       description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing.",
-      year: "2022"
+      year: "2022",
+      category: "Microservice",
+      image: "/images/rule-service.png"
     }
   ];
 
   return (
-    <section className="relative max-w-4xl mx-auto py-8">
-      <h2 className="text-xl sm:text-2xl font-bold mb-8">Projects</h2>
-      {projects.map((project, index) => (
-        <ProjectItem key={index} {...project} />
-      ))}
-      
-      {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-[-200px] right-[-200px] h-[300px] opacity-30 pointer-events-none">
-        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,#db2777_0deg,#9333ea_120deg,#2563eb_240deg,#db2777_360deg)] blur-[100px]" />
+    <section className="max-w-4xl mx-auto py-8">
+      <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-8">Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            project={project}
+            onClick={() => setSelectedProject(project)}
+          />
+        ))}
       </div>
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 } 

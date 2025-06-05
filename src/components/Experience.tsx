@@ -34,7 +34,7 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
               />
             </div>
             <div>
-              <h3 className="text-lg sm:text-xl font-semibold flex flex-wrap items-center gap-2">
+              <h3 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] flex flex-wrap items-center gap-2">
                 {company}
                 {liveLink && (
                   <a 
@@ -55,11 +55,11 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
                   size={20}
                 />
               </h3>
-              <p className="text-sm sm:text-base text-gray-400">{role}</p>
+              <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">{role}</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs sm:text-sm text-gray-500">{period}</span>
+            <span className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">{period}</span>
           </div>
         </div>
       </button>
@@ -68,7 +68,7 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
           isExpanded ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+        <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
           {description}
         </p>
       </div>
@@ -96,7 +96,7 @@ export default function Experience() {
 
   return (
     <section className="max-w-4xl mx-auto pb-4 pt-8">
-      <h2 className="text-xl sm:text-2xl font-bold mb-8">Experience</h2>
+      <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-8">Experience</h2>
       {experiences.map((exp, index) => (
         <ExperienceItem key={index} {...exp} />
       ))}

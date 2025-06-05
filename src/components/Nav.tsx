@@ -53,14 +53,14 @@ export default function Nav() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="lg:hidden fixed top-4 right-4 z-50 p-2 rounded-lg bg-black/50 backdrop-blur-sm border border-white/10"
+        className="lg:hidden fixed top-4 right-4 z-50 p-2 rounded-lg bg-[#1c1c1c]/50 backdrop-blur-sm border border-white/10"
       >
         {isMenuOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
       </button>
 
       {/* Navigation Menu */}
       <nav className={`
-        fixed lg:left-0 top-0 h-screen w-64 bg-black border-r border-[#1a1a1a] p-6 pt-12 z-40
+        fixed lg:left-0 top-0 h-screen w-56 bg-[#1c1c1c] border-r border-[#1a1a1a] p-6 pt-12 z-40
         transition-transform duration-300 ease-in-out
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
@@ -73,10 +73,10 @@ export default function Nav() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className={`block px-4 py-2 rounded-lg transition-all duration-200 ${
+                className={`block px-4 py-2 rounded-lg transition-all duration-200 text-[14px] leading-[20px] font-[500] ${
                   activeSection === item.href.substring(1)
-                    ? 'text-white bg-white/5'
-                    : 'text-gray-400 hover:text-white hover:bg-white/5'
+                    ? 'text-[rgb(245,245,245)] bg-white/5'
+                    : 'text-[rgb(133,133,133)] hover:text-[rgb(245,245,245)] hover:bg-white/5'
                 }`}
               >
                 {item.label}
