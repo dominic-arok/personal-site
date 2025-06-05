@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { MdMenu, MdClose } from 'react-icons/md';
+import { UserIcon, BriefcaseIcon, WrenchIcon, PencilIcon } from '@heroicons/react/24/outline';
 
 interface NavItem {
   label: string;
   href: string;
+  icon: React.ReactNode;
 }
 
 export default function Nav() {
@@ -13,10 +15,10 @@ export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const navItems: NavItem[] = [
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' }
+    { label: 'About', href: '#about', icon: <UserIcon className="w-5 h-5" /> },
+    { label: 'Experience', href: '#experience', icon: <BriefcaseIcon className="w-5 h-5" /> },
+    { label: 'Skills', href: '#skills', icon: <WrenchIcon className="w-5 h-5" /> },
+    { label: 'Projects', href: '#projects', icon: <PencilIcon className="w-5 h-5" /> }
   ];
 
   useEffect(() => {
@@ -60,11 +62,11 @@ export default function Nav() {
 
       {/* Navigation Menu */}
       <nav className={`
-        fixed lg:left-0 top-0 h-screen w-56 bg-[#1c1c1c] border-r border-[#1a1a1a] p-6 pt-12 z-40
+        fixed lg:left-0 top-0 h-screen w-56 bg-[#1c1c1c] border-r border-[#1a1a1a] p-4 pt-16 z-40
         transition-transform duration-300 ease-in-out
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
-        <ul className="space-y-2">
+        <ul className="space-y-1">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
@@ -73,13 +75,16 @@ export default function Nav() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className={`block px-4 py-2 rounded-lg transition-all duration-200 text-[14px] leading-[20px] font-[500] ${
+                className={`block px-2 py-1.5 rounded-lg transition-all duration-200 text-[14px] leading-[20px] font-[500] ${
                   activeSection === item.href.substring(1)
                     ? 'text-[rgb(245,245,245)] bg-white/5'
                     : 'text-[rgb(133,133,133)] hover:text-[rgb(245,245,245)] hover:bg-white/5'
                 }`}
               >
-                {item.label}
+                <div className="flex items-center gap-2.5">
+                  <span className="opacity-70">{item.icon}</span>
+                  {item.label}
+                </div>
               </a>
             </li>
           ))}

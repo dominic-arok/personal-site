@@ -23,14 +23,24 @@ export default function Header() {
             </span>
           </div>
         </div>
-        <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)] mb-8 sm:mb-12">
-          3rd Year Computer Science Student at UC Santa Cruz. Excited for opportunities to learn and contribute my skills to interesting software!
-        </p>
+        <div className="space-y-2 mb-8 sm:mb-12">
+          <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+            3rd Year Computer Science Student at UC Santa Cruz.
+          </p>
+          <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+            Excited for opportunities to learn and contribute my skills to interesting software!
+          </p>
+        </div>
         <div className="mb-8 sm:mb-12">
           <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-4">About</h2>
-          <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-            I have experience in full-stack software engineering across several types of applications. I have built web applications, desktop applications, microservices, CLI tools, and libraries.
-          </p>
+          <div className="space-y-2">
+            <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+              I have experience in full-stack software engineering across several types of applications.
+            </p>
+            <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
+              I have built web applications, desktop applications, microservices, CLI tools, and libraries.
+            </p>
+          </div>
         </div>
         <div id="contact" className="flex gap-6">
           <Link 
