@@ -153,7 +153,7 @@ export default function Projects() {
     {
       title: "Safe Deposit",
       technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
-      description: "Created web app with Node.js / Express.js, providing secure file distribution and up to 1000 concurrent downloads. Constructed user-friendly frontend interface with EJS, reducing file upload process to < 5 seconds. Stored encrypted passwords with MongoDB Atlas, enabling protected downloads and improving security by 35%.",
+      description: "Created web app with Node.js / Express.js, providing secure file distribution and up to 1000 concurrent downloads. Stored encrypted passwords with MongoDB Atlas, enabling protected downloads and improving security by 35%. Set up CI/CD workflow with GitHub / Render for auto-deploys, enabling updates within 1 minute of every push.",
       liveLink: "https://safedeposit.onrender.com",
       githubLink: "https://github.com/dominic-arok/SafeDeposit",
       year: "2025",
@@ -163,7 +163,7 @@ export default function Projects() {
     {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
-      description: "Collaborated with Agile team of 5 to develop full-stack recipe platform featuring over 50000 recipes. Implemented and integrated React components with REST API endpoints, improving data retrieval by 25%. Configured DNS, OAuth, and environment keys via Clerk.js to deploy app, reducing downtime by 8 hours.",
+      description: "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented and integrated React components with REST API endpoints, improving page responsiveness by 25%. Implemented authentication and configured DNS via Clerk.js to deploy app, reducing downtime by 8 hours.",
       liveLink: "https://biteright.co",
       githubLink: "https://github.com/BiteRight/frontend",
       year: "2024",
@@ -173,7 +173,7 @@ export default function Projects() {
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Developed REST API microservice to auto-fill and generate PDFs with user data, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients.",
+      description: "Developed REST APIs with modular design to both auto-fill and render PDFs, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients.",
       year: "2023",
       category: "Microservice",
       image: "/images/doc-service.png"
@@ -181,7 +181,7 @@ export default function Projects() {
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Created Rules Engine application for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Hosted Flask application on AWS EC2 instance for easy client integration and testing.",
+      description: "Created Rules Engine microservice for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Wrote unit tests for rule creation functionality with Python unittest, increasing test coverage to 95%.",
       year: "2022",
       category: "Microservice",
       image: "/images/rule-service.png"
