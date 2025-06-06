@@ -145,7 +145,7 @@ export default function Projects() {
     {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
-      description: "Developed CLI tool with Go and Cobra that implements 7 essential Postman features directly in the terminal. Built request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUI tools. Published tool with Homebrew package manager and received 30+ downloads.",
+      description: "Devised CLI tool with Go and Cobra that implements 7 essential Postman features directly in the terminal. Built request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUI tools. Published tool with Homebrew package manager and received 30+ downloads.",
       year: "2025",
       category: "CLI Tool",
       image: "/images/post-boy.png"
@@ -173,7 +173,7 @@ export default function Projects() {
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Developed REST APIs with modular design to both auto-fill and render PDFs, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and persistent access by clients.",
+      description: "Established REST APIs with modular design to both auto-fill and render PDFs, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and 24/7 access by clients.",
       year: "2023",
       category: "Microservice",
       image: "/images/doc-service.png"
