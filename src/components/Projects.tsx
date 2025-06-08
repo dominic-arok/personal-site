@@ -145,7 +145,7 @@ export default function Projects() {
     {
       title: "Post Boy",
       technologies: ["Go", "Cobra", "Homebrew"],
-      description: "Devised CLI tool with Go and Cobra that implements 7 essential Postman features directly in the terminal. Built request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUI tools. Published tool with Homebrew package manager and received 30+ downloads.",
+      description: "Devised CLI tool with Go and Cobra that implements 7 essential Postman features and received 30+ downloads. Created request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUIs.",
       year: "2025",
       category: "CLI Tool",
       image: "/images/post-boy.png"
@@ -173,7 +173,7 @@ export default function Projects() {
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Established REST APIs with modular design to both auto-fill and render PDFs, reducing delivery time by 75%. Designed thumbnail feature with Python to give users preview of generated PDF, reducing output errors by 15%. Deployed Flask microservice to AWS EC2 instance, enabling testing and 24/7 access by clients.",
+      description: "Established backend REST API with Python to auto-fill and render PDFs, cutting manual data entry time by 75%. Wrote unit tests for PDF filling functionality with Python unittest, increasing test coverage to 95%. Deployed Flask microservice to AWS EC2 instance, enabling testing and 24/7 access by clients.",
       year: "2023",
       category: "Microservice",
       image: "/images/doc-service.png"
@@ -181,7 +181,7 @@ export default function Projects() {
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Created Rules Engine microservice for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%. Wrote unit tests for rule creation functionality with Python unittest, increasing test coverage to 95%.",
+      description: "Created Rules Engine microservice for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%.",
       year: "2022",
       category: "Microservice",
       image: "/images/rule-service.png"
