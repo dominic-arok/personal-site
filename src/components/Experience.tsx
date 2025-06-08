@@ -89,7 +89,7 @@ export default function Experience() {
       company: "Ushur Inc.",
       role: "Software Engineer Intern",
       period: "Jun 2024 - Nov 2024",
-      description: "Developed component library of 50+ customizable variations with React, cutting UI development time by 30%. Built components and documentation with TypeScript / Tailwind / Storybook.js, growing maintainability by 20%. Delivered UI features by working cross-functionally with design team, securing 98% accuracy to UI/UX design system.",
+      description: "Developed frontend component library of 50+ customizable variations with React, cutting UI building time by 30%. Built components and documentation with TypeScript / Tailwind / Storybook.js, growing maintainability by 20%. Delivered UI features by working cross-functionally with design team, securing 98% accuracy to UI/UX blueprint.",
       logo: "/ushur.jpeg"
     }
   ];
