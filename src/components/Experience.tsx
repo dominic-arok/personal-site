@@ -79,14 +79,21 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
 export default function Experience() {
   const experiences = [
     {
-      company: "Universal Audio",
-      role: "Software Developer (Sponsored Project)",
+      company: "iHerb",
+      role: "Software Engineer Intern - Incoming",
+      period: "Jun 2025 - Present",
+      description: "Develop enterprise applications with C# on .NET framework, adhering to specifications and quality standards. Collaborate with cross-functional team of analysts and product owners to gather requirements / write user stories. Conduct peer code reviews, support application packaging / deployment, and migrate legacy systems to modern .NET.",
+      logo: "/iherb.jpeg"
+    },
+    {
+      company: "Universal Audio (Sponsored Project)",
+      role: "Software Engineer Intern",
       period: "Jan 2025 - Jun 2025",
       description: "Led team to develop USB audio interface with C++ microcontroller firmware, enabling 4 channel audio streaming. Engineered accompanying desktop app in C++ / JUCE using OOP principles, providing 13 types of audio control. Produced mixing / audio effects features using DSP algorithms, enabling users to apply effects with < 1 ms of latency.",
       logo: "/ua.jpeg"
     },
     {
-      company: "Ushur Inc.",
+      company: "Ushur",
       role: "Software Engineer Intern",
       period: "Jun 2024 - Nov 2024",
       description: "Developed frontend component library of 50+ customizable variations with React, cutting UI building time by 30%. Built components and documentation with TypeScript / Tailwind / Storybook.js, growing maintainability by 20%. Delivered UI features by working cross-functionally with design team, securing 98% accuracy to UI/UX blueprint.",

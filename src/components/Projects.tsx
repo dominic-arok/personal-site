@@ -143,12 +143,12 @@ export default function Projects() {
 
   const projects: ProjectProps[] = [
     {
-      title: "Post Boy",
-      technologies: ["Go", "Cobra", "Homebrew"],
-      description: "Devised CLI tool with Go and Cobra that implements 7 essential Postman features and received 30+ downloads. Created request executor that stores and runs API requests, enabling 2x faster API testing than traditional GUIs.",
+      title: "Emerald",
+      technologies: ["Go", "Cobra", "Stripe API"],
+      description: "Devised CLI tool with Go / Cobra to verify bank accounts with 0 frontend dependencies and 0 3rd-party logins. Integrated Stripe API to initiate industry-standard verification using ACH micro-deposit flows in < 10 seconds.",
       year: "2025",
       category: "CLI Tool",
-      image: "/images/post-boy.png"
+      image: "/images/emerald.png"
     },
     {
       title: "Safe Deposit",
