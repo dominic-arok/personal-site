@@ -1,7 +1,7 @@
 export default function Skills() {
   const skills = [
-    "Python",
     "Go",
+    "Python",
     "TypeScript",
     "Node.js",
     "React",
