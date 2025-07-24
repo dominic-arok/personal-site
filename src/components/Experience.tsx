@@ -80,9 +80,9 @@ export default function Experience() {
   const experiences = [
     {
       company: "iHerb",
-      role: "Software Engineer Intern - Incoming",
+      role: "Software Engineer Intern",
       period: "Jun 2025 - Present",
-      description: "Develop enterprise applications with C# on .NET framework, adhering to specifications and quality standards. Collaborate with cross-functional team of analysts and product owners to gather requirements / write user stories. Conduct peer code reviews, support application packaging / deployment, and migrate legacy systems to modern .NET.",
+      description: "Developed enterprise applications with C# on .NET framework, ensuring 100% adherence to specifications.Migrated legacy systems to modern .NET, enabling long-term support and reducing technical debt by 35%. Deployed upgraded APIs to Kubernetes via Harness, fixing deployment blockers and raising service uptime by 25%.",
       logo: "/iherb.jpeg"
     },
     {
@@ -96,7 +96,7 @@ export default function Experience() {
       company: "Ushur",
       role: "Software Engineer Intern",
       period: "Jun 2024 - Nov 2024",
-      description: "Developed frontend component library of 50+ customizable variations with React, cutting UI building time by 30%. Built components and documentation with TypeScript / Tailwind / Storybook.js, growing maintainability by 20%. Delivered UI features by working cross-functionally with design team, securing 98% accuracy to UI/UX blueprint.",
+      description: "Developed frontend component library of 50+ customizable variations with React, cutting UI building time by 30%. Built components / documentation with TypeScript / Tailwind / Storybook.js, accelerating integration by 15%. Delivered UI features by working cross-functionally with design team, securing 100% accuracy to UI/UX blueprint.",
       logo: "/ushur.jpeg"
     }
   ];
