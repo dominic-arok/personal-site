@@ -3,13 +3,13 @@ export default function Skills() {
     "Go",
     "Python",
     "TypeScript",
+    "Java",
     "Node.js",
     "React",
-    "TailwindCSS",
     "PostgreSQL",
     "MongoDB",
     "Docker",
-    "AWS"
+    "K8s"
   ];
 
   return (
