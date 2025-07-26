@@ -9,7 +9,7 @@ export default function Skills() {
     "PostgreSQL",
     "MongoDB",
     "Docker",
-    "K8s"
+    "Kubernetes"
   ];
 
   return (
