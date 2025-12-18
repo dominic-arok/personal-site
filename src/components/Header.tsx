@@ -25,7 +25,7 @@ export default function Header() {
         </div>
         <div className="space-y-2 mb-8 sm:mb-12">
           <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-            Software Engineer and 3rd Year Computer Science Student at UC Santa Cruz.
+            Software Engineer | B.S. Computer Science, UC Santa Cruz (2025)
           </p>
           <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
             Excited for opportunities to learn and contribute my skills to interesting software!
