@@ -81,7 +81,7 @@ export default function Experience() {
     {
       company: "iHerb",
       role: "Software Engineer Intern",
-      period: "Jun 2025 - Present",
+      period: "Jun 2025 - Sep 2025",
       description: "Developed enterprise applications with C# on .NET framework, ensuring 100% adherence to specifications. Migrated legacy systems to modern .NET, enabling long-term support and reducing technical debt by 35%. Deployed upgraded APIs to Kubernetes via Harness, fixing deployment blockers and raising service uptime by 25%.",
       logo: "/iherb.jpeg"
     },
