@@ -67,29 +67,29 @@ export default function Nav() {
         ${isMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         <ul className="space-y-1">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
+        {navItems.map((item) => (
+          <li key={item.href}>
+            <a
+              href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
                 className={`block px-2 py-1.5 rounded-lg transition-all duration-200 text-[14px] leading-[20px] font-[500] ${
-                  activeSection === item.href.substring(1)
+                activeSection === item.href.substring(1)
                     ? 'text-[rgb(245,245,245)] bg-white/5'
                     : 'text-[rgb(133,133,133)] hover:text-[rgb(245,245,245)] hover:bg-white/5'
-                }`}
-              >
+              }`}
+            >
                 <div className="flex items-center gap-2.5">
                   <span className="opacity-70">{item.icon}</span>
-                  {item.label}
+              {item.label}
                 </div>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
 
       {/* Overlay */}
       {isMenuOpen && (

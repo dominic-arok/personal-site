@@ -2,14 +2,14 @@
 
 import Link from 'next/link';
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 
 export default function Header() {
   return (
     <section className="relative max-w-4xl mx-auto py-8">
-      {/* Gradient Background */}
-      <div className="absolute top-[-50px] left-[-150%] right-[-150%] h-[250px] opacity-30 pointer-events-none">
-        <div className="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,#2563eb_0deg,#9333ea_120deg,#db2777_240deg,#2563eb_360deg)] blur-[50px]" />
+      {/* Purple Header Background */}
+      <div className="absolute top-[-50px] left-[-150%] right-[-150%] h-[280px] pointer-events-none opacity-60">
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#734f96_0%,#734f96_60%,transparent_100%)]" />
       </div>
 
       {/* Content */}
@@ -66,6 +66,15 @@ export default function Header() {
           >
             <FaGithub size={24} />
           </Link>
+          <a
+            href="/resume/DominicArokiarajResume.pdf"
+            download="DominicArokiarajResume.pdf"
+            className="text-gray-400 hover:text-[#734f96] transition-colors"
+            aria-label="Download Resume"
+            title="Download Dominic's Resume"
+          >
+            <FaFileDownload size={22} />
+          </a>
         </div>
       </div>
     </section>
