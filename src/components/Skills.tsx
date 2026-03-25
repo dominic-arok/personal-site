@@ -7,9 +7,9 @@ export default function Skills() {
     "Node.js",
     "React",
     "PostgreSQL",
-    "MongoDB",
     "Docker",
-    "Kubernetes"
+    "Kubernetes",
+    "Azure"
   ];
 
   return (
