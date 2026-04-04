@@ -5,10 +5,10 @@ export default function Skills() {
     "Go",
     "TypeScript",
     "Node.js",
-    "React",
     "PostgreSQL",
     "Docker",
     "Kubernetes",
+    "AWS",
     "Azure"
   ];
 
