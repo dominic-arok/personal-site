@@ -8,8 +8,8 @@ export default function Skills() {
     "PostgreSQL",
     "Docker",
     "Kubernetes",
-    "AWS",
-    "Azure"
+    "Azure",
+    "AWS"
   ];
 
   return (
