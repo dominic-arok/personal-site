@@ -145,7 +145,7 @@ export default function Projects() {
     {
       title: "Emerald",
       technologies: ["Go", "Cobra", "Stripe API"],
-      description: "Devised CLI tool with Go / Cobra to verify bank accounts with 0 frontend dependencies and 0 3rd-party logins. Integrated Stripe API to initiate industry-standard verification using ACH micro-deposit flows in < 10 seconds.",
+      description: "Devised CLI tool with Go & Cobra to verify bank accounts with 0 frontend dependencies & 0 3rd-party logins. Integrated Stripe API to initiate industry-standard verification using ACH micro-deposit flows in < 10 seconds.",
       year: "2025",
       category: "CLI Tool",
       image: "/images/emerald.png"
@@ -153,7 +153,7 @@ export default function Projects() {
     {
       title: "Safe Deposit",
       technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
-      description: "Created web app with Node.js / Express.js, providing secure file distribution and up to 1000 concurrent downloads. Stored encrypted passwords with MongoDB Atlas, enabling protected downloads and improving security by 35%. Set up CI/CD workflow with GitHub / Render for auto-deploys, enabling updates within 1 minute of every push.",
+      description: "Created web app with Node.js & Express.js, providing secure file distribution & up to 1000 concurrent downloads. Set up CI/CD workflow with GitHub & Render for auto-deploys, enabling updates within 1 minute of every push.",
       liveLink: "https://safedeposit.onrender.com",
       githubLink: "https://github.com/dominic-arok/SafeDeposit",
       year: "2025",
@@ -163,7 +163,7 @@ export default function Projects() {
     {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
-      description: "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented and integrated React components with REST API endpoints, improving page responsiveness by 25%. Implemented authentication and configured DNS via Clerk.js to deploy app, reducing downtime by 8 hours.",
+      description: "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented & integrated React components with REST API endpoints, improving page responsiveness by 25%.",
       liveLink: "https://biteright.co",
       githubLink: "https://github.com/BiteRight/frontend",
       year: "2024",
@@ -173,7 +173,7 @@ export default function Projects() {
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Established backend REST API with Python to auto-fill and render PDFs, cutting manual data entry time by 75%. Wrote unit tests for PDF filling functionality with Python unittest, increasing test coverage to 95%. Deployed Flask microservice to AWS EC2 instance, enabling testing and 24/7 access by clients.",
+      description: "Established backend microservice with Python to auto-fill & render PDFs, cutting manual data entry time by 75%. Wrote unit tests for PDF filling functionality with Python unittest, increasing test coverage to 95%.",
       year: "2023",
       category: "Microservice",
       image: "/images/doc-service.png"
