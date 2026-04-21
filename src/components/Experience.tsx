@@ -89,7 +89,7 @@ export default function Experience() {
       company: "Universal Audio (Sponsored Project)",
       role: "Software Engineer Intern",
       period: "Jan 2025 - Jun 2025",
-      description: "Led team to develop USB audio interface with C++ microcontroller firmware, enabling 4 channel audio streaming. Engineered accompanying desktop application in C++ & JUCE, providing 13 types of audio control on interface. Produced mixing / audio effects features using DSP algorithms, enabling users to apply effects with < 1 ms of latency.",
+      description: "Engineered a C++ desktop application for a USB audio interface, implementing 13 real-time control features. Implemented logic to translate user inputs into control messages, enabling communication across 4 audio channels. Integrated audio mixing & effects features using DSP algorithms, enabling <1 ms latency when applying effects.",
       logo: "/ua.jpeg"
     },
     {
