@@ -79,6 +79,13 @@ function ExperienceItem({ company, role, period, description, liveLink, logo }: 
 export default function Experience() {
   const experiences = [
     {
+      company: "KPMG Ignition",
+      role: "Software Engineer, Development - Tax Technology",
+      period: "Apr 2026 - Present",
+      description: "Developing application for Digital Gateway Platform.",
+      logo: "/kpmg.jpeg"
+    },
+    {
       company: "iHerb",
       role: "Software Engineer Intern",
       period: "Jun 2025 - Sep 2025",

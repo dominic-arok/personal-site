@@ -19,13 +19,13 @@ export default function Header() {
           <div className="flex items-center">
             <MdLocationOn size={18} className="mr-1 text-[rgb(245,245,245)]" />
             <span className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)]">
-              Mountain House, CA
+              Atlanta, GA
             </span>
           </div>
         </div>
         <div className="space-y-2 mb-8 sm:mb-12">
           <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-            Software Engineer | UC Santa Cruz Alum (2025)
+            Software Engineer | UC Santa Cruz Alum
           </p>
           <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
             Excited for opportunities to learn and contribute my skills to interesting software!
