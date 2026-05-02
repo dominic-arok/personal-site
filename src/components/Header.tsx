@@ -38,7 +38,7 @@ export default function Header() {
               I am experienced in full-stack software engineering across several types of applications.
             </p>
             <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-              I have built web applications, desktop applications, microservices, CLI tools, and libraries.
+              I have built web applications, desktop applications, microservices, and libraries.
             </p>
           </div>
         </div>

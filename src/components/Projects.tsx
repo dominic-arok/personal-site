@@ -143,14 +143,6 @@ export default function Projects() {
 
   const projects: ProjectProps[] = [
     {
-      title: "Emerald",
-      technologies: ["Go", "Cobra", "Stripe API"],
-      description: "Devised CLI tool with Go & Cobra to verify bank accounts with 0 frontend dependencies & 0 3rd-party logins. Integrated Stripe API to initiate industry-standard verification using ACH micro-deposit flows in < 10 seconds.",
-      year: "2025",
-      category: "CLI Tool",
-      image: "/images/emerald.png"
-    },
-    {
       title: "Safe Deposit",
       technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
       description: "Created web app with Node.js & Express.js, providing secure file distribution & up to 1000 concurrent downloads. Set up CI/CD workflow with GitHub & Render for auto-deploys, enabling updates within 1 minute of every push.",
