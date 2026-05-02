@@ -3,7 +3,7 @@ export default function Skills() {
     "Python",
     "Java",
     "Go",
-    "TypeScript",
+    "C#",
     "Node.js",
     "PostgreSQL",
     "Docker",
