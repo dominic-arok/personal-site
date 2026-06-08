@@ -89,7 +89,7 @@ export default function Experience() {
       company: "iHerb",
       role: "Software Engineer Intern",
       period: "Jun 2025 - Sep 2025",
-      description: "Migrated legacy .NET services using Upgrade Assistant, resolving 25+ compatibility, LINQ, & async-related issues. Diagnosed & fixed 20+ build / runtime failures via CI/CD logs, enabling successful API deployment to Kubernetes. Validated 10+ endpoints via Swagger & Kibana, verifying behavior in 3 environments (local, pipeline, deployed).",
+      description: "Migrated legacy .NET services using Upgrade Assistant, resolving 25+ compatibility, LINQ, & async-related issues. Diagnosed & fixed 20+ build / runtime failures via CI/CD logs, enabling successful API deployment to Kubernetes. Validated 15+ endpoints via Swagger & Kibana, verifying behavior in 3 environments (local, pipeline, deployed).",
       logo: "/iherb.jpeg"
     },
     {
