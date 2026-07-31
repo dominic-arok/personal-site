@@ -89,14 +89,14 @@ export default function Experience() {
       company: "iHerb",
       role: "Software Engineer Intern",
       period: "Jun 2025 - Sep 2025",
-      description: "Migrated legacy .NET services using Upgrade Assistant, resolving 25+ compatibility, LINQ, & async-related issues. Diagnosed & fixed 20+ build / runtime failures via CI/CD logs, enabling successful API deployment to Kubernetes. Validated 15+ endpoints via Swagger & Kibana, verifying behavior in 3 environments (local, pipeline, deployed).",
+      description: "Migrated legacy .NET services using Upgrade Assistant, resolving 25+ compatibility, LINQ, & async-related issues. Diagnosed & fixed 20+ build / runtime failures via CI/CD logs, enabling successful API deployment to Kubernetes. Validated 15+ endpoints via Swagger & Grafana, verifying behavior in 3 envs (local, pipeline, deployed).",
       logo: "/iherb.jpeg"
     },
     {
       company: "Universal Audio (Sponsored Project)",
       role: "Software Engineer Intern",
       period: "Jan 2025 - Jun 2025",
-      description: "Engineered Python desktop application for a USB audio interface, implementing 13 real-time control features. Implemented logic to translate user inputs into control messages, enabling communication across 4 audio channels. Integrated audio mixing & effects features using DSP algorithms, enabling <1 ms latency when applying effects.",
+      description: "Engineered C++/JUCE desktop application for a USB audio interface, implementing 13 real-time control features. Implemented logic to translate user inputs into control messages, enabling communication across 4 audio channels. Integrated audio mixing & effects features using DSP algorithms, enabling < 1 ms latency when applying effects.",
       logo: "/ua.jpeg"
     },
     {
