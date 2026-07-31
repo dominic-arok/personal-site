@@ -1,15 +1,15 @@
 export default function Skills() {
   const skills = [
     "Python",
-    "Java",
     "Go",
     "C#",
+    "Java",
     "Node.js",
     "PostgreSQL",
-    "Docker",
+    "Redis"
+,   "Docker",
     "Kubernetes",
-    "Azure",
-    "AWS"
+    "Azure"
   ];
 
   return (
