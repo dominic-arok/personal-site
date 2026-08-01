@@ -7,30 +7,37 @@ import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
 export default function Header() {
   return (
     <section className="relative max-w-4xl mx-auto py-8">
-      {/* Purple Header Background */}
-      <div className="absolute top-[-50px] left-[-150%] right-[-150%] h-[280px] pointer-events-none opacity-60">
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#734f96_0%,#734f96_60%,transparent_100%)]" />
+      <div className="relative mb-4 sm:mb-6">
+        {/* Purple Header Background */}
+        <div className="absolute top-[-50px] left-[-100%] right-[-100%] bottom-0 pointer-events-none opacity-60">
+          <div className="absolute inset-0 bg-[#734f96]" />
+        </div>
+
+        <div className="relative">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+            <h1 className="text-[48px] leading-[60px] font-[600] text-[#e8dff5] normal-case">Dominic Arokiaraj</h1>
+            <div className="flex items-center sm:translate-y-1">
+              <MdLocationOn size={18} className="mr-1 text-[#e8dff5]" />
+              <span className="text-[18px] leading-[28px] font-[500] text-[#e8dff5]">
+                Atlanta, GA
+              </span>
+            </div>
+          </div>
+          <div className="py-4 sm:py-6">
+            <div className="space-y-2">
+              <p className="text-[16px] leading-[24px] font-[400] text-[#e8dff5]">
+                Software Engineer | UC Santa Cruz Alum
+              </p>
+              <p className="text-[16px] leading-[24px] font-[400] text-[#e8dff5]">
+                Excited for opportunities to learn and contribute my skills to interesting software!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Content */}
       <div className="relative">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-8">
-          <h1 className="text-[48px] leading-[60px] font-[600] text-[rgb(245,245,245)] normal-case">Dominic Arokiaraj</h1>
-          <div className="flex items-center">
-            <MdLocationOn size={18} className="mr-1 text-[rgb(245,245,245)]" />
-            <span className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)]">
-              Atlanta, GA
-            </span>
-          </div>
-        </div>
-        <div className="space-y-2 mb-8 sm:mb-12">
-          <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-            Software Engineer | UC Santa Cruz Alum
-          </p>
-          <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-            Excited for opportunities to learn and contribute my skills to interesting software!
-          </p>
-        </div>
         <div className="mb-8 sm:mb-12">
           <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-4">About</h2>
           <div className="space-y-2">
