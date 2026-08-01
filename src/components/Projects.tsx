@@ -178,6 +178,27 @@ export default function Projects() {
       image: "/images/event-driven-fraud-detection-system.png",
     },
     {
+      title: "Financial Ledger Service",
+      technologies: ["Java", "Spring Boot", "PostgreSQL"],
+      description:
+        "Engineered double-entry ledger system for recording transactions and ensuring consistent debit–credit balances. Created idempotent payment API with ACID transactions, blocking duplicates across 1K+ concurrent request.",
+      githubLink: "https://github.com/dominic-arok/financial-ledger-service",
+      year: "2026",
+      category: "Backend System",
+      image: "/images/financial-ledger-service.png",
+    },
+    {
+      title: "Transaction Reconciliation Service",
+      technologies: ["Python", "FastAPI", "PostgreSQL"],
+      description:
+        "Designed async reconciliation API with Postgres audit trail, flagging discrepancies across internal & external records. Built deterministic matching engine with fallback, detecting 99% of data mismatches across 10K test transactions.",
+      githubLink:
+        "https://github.com/dominic-arok/transaction-reconciliation-service",
+      year: "2026",
+      category: "Backend System",
+      image: "/images/transaction-reconciliation-service.png",
+    },
+    {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
       description:
