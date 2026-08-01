@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
-import Image from 'next/image';
+import Image from "next/image";
 
 interface ProjectProps {
   title: string;
@@ -15,9 +15,15 @@ interface ProjectProps {
   category?: string;
 }
 
-function ProjectCard({ project, onClick }: { project: ProjectProps; onClick: () => void }) {
+function ProjectCard({
+  project,
+  onClick,
+}: {
+  project: ProjectProps;
+  onClick: () => void;
+}) {
   return (
-    <button 
+    <button
       onClick={onClick}
       className="group bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-all duration-200 cursor-pointer w-full flex flex-col"
     >
@@ -36,7 +42,7 @@ function ProjectCard({ project, onClick }: { project: ProjectProps; onClick: () 
           {project.title}
         </h3>
         {project.category && (
-          <span className="text-[13px] leading-[20px] font-[500] text-[rgb(133,133,133)] block mb-3">
+          <span className="inline-block px-2 py-0.5 rounded-md bg-[#734f96]/35 text-[13px] leading-[20px] font-[500] text-[#e8dff5] mb-3">
             {project.category}
           </span>
         )}
@@ -44,9 +50,9 @@ function ProjectCard({ project, onClick }: { project: ProjectProps; onClick: () 
           {project.technologies.map((tech, index) => (
             <span
               key={index}
-              className="text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)]"
+              className="px-2 py-0.5 rounded-md bg-white/5 text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)]"
             >
-              {tech}{index < project.technologies.length - 1 ? " · " : ""}
+              {tech}
             </span>
           ))}
         </div>
@@ -55,7 +61,13 @@ function ProjectCard({ project, onClick }: { project: ProjectProps; onClick: () 
   );
 }
 
-function ProjectModal({ project, onClose }: { project: ProjectProps; onClose: () => void }) {
+function ProjectModal({
+  project,
+  onClose,
+}: {
+  project: ProjectProps;
+  onClose: () => void;
+}) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/80" onClick={onClose} />
@@ -65,8 +77,18 @@ function ProjectModal({ project, onClose }: { project: ProjectProps; onClose: ()
             onClick={onClose}
             className="text-gray-400 hover:text-white bg-[#1c1c1c] rounded-full p-1"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
@@ -100,7 +122,7 @@ function ProjectModal({ project, onClose }: { project: ProjectProps; onClose: ()
                 {project.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-2 sm:px-3 py-1 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)] transition-all duration-200"
+                    className="px-2 sm:px-2.5 py-0.5 bg-white/5 rounded-md text-[13px] leading-[20px] font-[500] text-[rgb(245,245,245)]"
                   >
                     {tech}
                   </span>
@@ -139,48 +161,57 @@ function ProjectModal({ project, onClose }: { project: ProjectProps; onClose: ()
 }
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(
+    null,
+  );
 
   const projects: ProjectProps[] = [
     {
       title: "Event-Driven Fraud Detection System",
       technologies: ["Go", "Gin", "Redis", "Kafka", "Docker"],
-      description: "Designed microservice system (transaction/fraud-detection/alerting) with event-driven async messaging. Built Kafka pipeline with 10 partitions, guaranteeing per-user transaction ordering via partition-key routing.Implemented stateful fraud detection engine via Redis for recent transaction history, achieving <200ms checks.",
-      githubLink: "https://github.com/dominic-arok/event-driven-fraud-detection-system",
+      description:
+        "Designed microservice system (transaction/fraud-detection/alerting) with event-driven async messaging. Built Kafka pipeline with 10 partitions, guaranteeing per-user transaction ordering via partition-key routing. Implemented stateful fraud detection engine via Redis for recent transaction history, achieving <200ms checks.",
+      githubLink:
+        "https://github.com/dominic-arok/event-driven-fraud-detection-system",
       year: "2026",
       category: "Backend System",
-      image: "/images/event-driven-fraud-detection-system.png"
+      image: "/images/event-driven-fraud-detection-system.png",
     },
     {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
-      description: "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented & integrated React components with REST API endpoints, improving page responsiveness by 25%.",
+      description:
+        "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented & integrated React components with REST API endpoints, improving page responsiveness by 25%.",
       githubLink: "https://github.com/BiteRight/frontend",
       year: "2024",
       category: "Web Application",
-      image: "/images/bite-right.png"
+      image: "/images/bite-right.png",
     },
     {
       title: "Doc Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Established backend microservice with Python to auto-fill & render PDFs, cutting manual data entry time by 75%. Wrote unit tests for PDF filling functionality with Python unittest, increasing test coverage to 95%.",
+      description:
+        "Established backend microservice with Python to auto-fill & render PDFs, cutting manual data entry time by 75%.",
       year: "2023",
       category: "Microservice",
-      image: "/images/doc-service.png"
+      image: "/images/doc-service.png",
     },
     {
       title: "Rule Service",
       technologies: ["Python", "Flask", "AWS EC2"],
-      description: "Created Rules Engine microservice for natural language rule creation, saving 12 hours/week in manual configuration. Designed JSON-based rule evaluation system with quick lookup time, reducing rule processing time by 20%.",
+      description:
+        "Created Rules Engine microservice for natural language rule creation, saving 12 hours/week in manual configuration.",
       year: "2022",
       category: "Microservice",
-      image: "/images/rule-service.png"
-    }
+      image: "/images/rule-service.png",
+    },
   ];
 
   return (
-    <section className="max-w-4xl mx-auto py-8">
-      <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-8">Projects</h2>
+    <section className="py-6">
+      <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-6">
+        Projects
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <ProjectCard
@@ -198,4 +229,4 @@ export default function Projects() {
       )}
     </section>
   );
-} 
+}
