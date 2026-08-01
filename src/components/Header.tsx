@@ -35,10 +35,10 @@ export default function Header() {
           <h2 className="text-[18px] leading-[28px] font-[500] text-[rgb(245,245,245)] mb-4">About</h2>
           <div className="space-y-2">
             <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-              I am experienced in full-stack software engineering across several types of applications.
+              I am a software engineer with a passion for backend engineering in the world of fintech applications.
             </p>
             <p className="text-[16px] leading-[24px] font-[400] text-[rgb(133,133,133)]">
-              I have built web applications, desktop applications, microservices, and libraries.
+              I have built backend applications, microservices, web applications, desktop applications, and libraries.
             </p>
           </div>
         </div>
