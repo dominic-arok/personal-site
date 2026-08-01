@@ -143,20 +143,18 @@ export default function Projects() {
 
   const projects: ProjectProps[] = [
     {
-      title: "Safe Deposit",
-      technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB Atlas", "Render"],
-      description: "Created web app with Node.js & Express.js, providing secure file distribution & up to 1000 concurrent downloads. Set up CI/CD workflow with GitHub & Render for auto-deploys, enabling updates within 1 minute of every push.",
-      liveLink: "https://safedeposit.onrender.com",
-      githubLink: "https://github.com/dominic-arok/SafeDeposit",
-      year: "2025",
-      category: "Web Application",
-      image: "/images/safe-deposit.png"
+      title: "Event-Driven Fraud Detection System",
+      technologies: ["Go", "Gin", "Redis", "Kafka", "Docker"],
+      description: "Designed microservice system (transaction/fraud-detection/alerting) with event-driven async messaging. Built Kafka pipeline with 10 partitions, guaranteeing per-user transaction ordering via partition-key routing.Implemented stateful fraud detection engine via Redis for recent transaction history, achieving <200ms checks.",
+      githubLink: "https://github.com/dominic-arok/event-driven-fraud-detection-system",
+      year: "2026",
+      category: "Backend System",
+      image: "/images/event-driven-fraud-detection-system.png"
     },
     {
       title: "Bite Right",
       technologies: ["TypeScript", "HTML", "CSS", "NextJS", "ClerkJS"],
       description: "Collaborated with Agile team across software development lifecycle to develop full-stack app of > 50000 recipes. Implemented & integrated React components with REST API endpoints, improving page responsiveness by 25%.",
-      liveLink: "https://biteright.co",
       githubLink: "https://github.com/BiteRight/frontend",
       year: "2024",
       category: "Web Application",
