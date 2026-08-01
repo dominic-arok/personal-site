@@ -82,7 +82,7 @@ export default function Experience() {
       company: "KPMG Ignition",
       role: "Software Engineer, Development - Tax Technology",
       period: "Apr 2026 - Present",
-      description: "Developing application for Digital Gateway Platform.",
+      description: "Developed & deployed 10+ full-stack features for Deal Connect .NET application on Digital Gateway tax platform. Implemented role-based access system with granular permissions spanning 40+ APIs and frontend workflows. Delivered user-scoped bulk export feature end-to-end, generating on-demand Excel reports of 2,000+ deals at a time. Engineered document upload & persistence feature, removing SharePoint dependency & reducing retrieval time by 33%. Automated client onboarding through service-layer and database enhancements, reducing onboarding time by 50%. Built self-service admin configuration tool, eliminating manual database updates across 10+ user/client settings.",
       logo: "/kpmg.jpeg"
     },
     {
