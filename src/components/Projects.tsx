@@ -184,7 +184,7 @@ export default function Projects() {
         "Engineered double-entry ledger system for recording transactions and ensuring consistent debit–credit balances. Created idempotent payment API with ACID transactions, blocking duplicates across 1K+ concurrent request.",
       githubLink: "https://github.com/dominic-arok/financial-ledger-service",
       year: "2026",
-      category: "Backend System",
+      category: "API",
       image: "/images/financial-ledger-service.png",
     },
     {
@@ -195,7 +195,7 @@ export default function Projects() {
       githubLink:
         "https://github.com/dominic-arok/transaction-reconciliation-service",
       year: "2026",
-      category: "Backend System",
+      category: "API",
       image: "/images/transaction-reconciliation-service.png",
     },
     {
